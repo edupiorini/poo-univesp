@@ -25,7 +25,7 @@ public class App {
         System.out.println(eduardo.getSaldo());
 
         System.out.println(laura.getSaldo());
-        eduardo.transfere(laura, 500.0);//saldo laura 700,00  saldo eduardo 1000,00
+        eduardo.transferePara(laura, 500.0);//saldo laura 700,00  saldo eduardo 1000,00
         System.out.println(laura.getSaldo());
         System.out.println(eduardo.getSaldo());
 

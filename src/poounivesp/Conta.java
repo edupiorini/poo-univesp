@@ -94,7 +94,7 @@ public class Conta extends Cliente {
         }
     }
 
-    public boolean transfere(Conta destino, double montante) {
+    public boolean transferePara(Conta destino, double montante) {
         if (getSaldo() >= montante) {
             setSaldo((montante * (-1.0)));
 
