@@ -85,12 +85,24 @@ public class Conta extends Cliente {
 
     public boolean saque(Double montante) {
         if (montante <= getSaldo()) {
-            montante = montante * (-1.0); // transformando montante em valor negativo
-            setSaldo(montante);
+            setSaldo((montante * (-1)));
             System.out.println("Saque concluído!");
             return true;
         } else {
             System.out.println("Saldo insuficiente! Abortando...");
+            return false;
+        }
+    }
+
+    public boolean transfere(Conta destino, double montante) {
+        if (getSaldo() >= montante) {
+            setSaldo((montante * (-1.0)));
+
+            destino.setSaldo(montante);
+            System.out.println("Transferência concluída!");
+            return true;
+        } else {
+            System.out.println("Transferência não realizada!");
             return false;
         }
     }
