@@ -1,6 +1,6 @@
 import accountmanagement.Conta;
 
-public class App {
+public class TestConta {
     public static void main(String[] args) throws Exception {
         Conta eduardo = new Conta(
         "Eduardo", 

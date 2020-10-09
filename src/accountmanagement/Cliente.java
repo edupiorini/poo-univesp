@@ -1,4 +1,4 @@
-package poounivesp;
+package accountmanagement;
 
 public class Cliente {
     private String nome;
