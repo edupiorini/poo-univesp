@@ -49,7 +49,7 @@ public class Data {
  public void trocarCom(int new_day){
      int temp = getDay();
      this.day = new_day;
-     day = temp;
+     new_day = temp;
  }
  }
     
