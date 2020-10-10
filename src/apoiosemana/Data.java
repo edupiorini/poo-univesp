@@ -44,7 +44,7 @@ public class Data {
 
  @Override
  public String toString() {
-     return "Data [day=" + day + ", month=" + month + ", year=" + year + "]";
+     return "Date: "+day+" / " +month+" / "+year;
  }
     
 }
