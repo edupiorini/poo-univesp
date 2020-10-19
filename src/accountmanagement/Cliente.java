@@ -1,15 +1,22 @@
 package accountmanagement;
 
+import adresses.Adress;
+import apoiosemana.Data;
+
 public class Cliente {
     private String nome;
     private String sobrenome;
     private String CPF;
-    private String data_nasc;
+    private Data data_nasc;
+    private Adress endereço;
 
-    public Cliente(String nome, String sobrenome, String cPF, String data_nasc) {
+   
+
+    
+    public Cliente(String nome, String sobrenome, String cPF, Data data_nasc) {
         this.nome = nome;
         this.sobrenome = sobrenome;
-        this.CPF = cPF;
+        CPF = cPF;
         this.data_nasc = data_nasc;
     }
 
@@ -37,11 +44,19 @@ public class Cliente {
         CPF = cPF;
     }
 
-    public String getData_nasc() {
+    public Data getData_nasc() {
         return data_nasc;
     }
 
-    public void setData_nasc(String data_nasc) {
+    public void setData_nasc(Data data_nasc) {
         this.data_nasc = data_nasc;
+    }
+
+    public Adress getEndereço() {
+        return endereço;
+    }
+
+    public void setEndereço(Adress endereço) {
+        this.endereço = endereço;
     }
 }

@@ -1,10 +1,13 @@
 package accountmanagement;
 
-public class Conta extends Cliente {
+import apoiosemana.Data;
+
+public class Conta{
 
     private String nroConta;
-    private String dataAbertura;
     private Double saldo = 200.0;
+    private Data dataAbertura;
+    private Cliente[] correntistas;
 
     public void setNroConta(String nroConta) {
         this.nroConta = nroConta;
@@ -14,11 +17,11 @@ public class Conta extends Cliente {
         return nroConta;
     }
 
-    public void setDataAbertura(String data) {
-        this.dataAbertura = data;
+    public void setDataAbertura(int dia, int mes, int ano) {
+        dataAbertura.setDate(dia, mes, ano);
     }
 
-    public String getDataAbertura() {
+    public Data getDataAbertura() {
         return dataAbertura;
     }
 
@@ -31,9 +34,11 @@ public class Conta extends Cliente {
     }
 
     public boolean depositar(Double montante) {
+        if(montante > 0){
         setSaldo(montante);
         System.out.println("Depósito efetuado!");
         return true;
+        }else return false;
     }
 
     public boolean saque(Double montante) {
@@ -60,10 +65,10 @@ public class Conta extends Cliente {
         }
     }
 
-    public Conta(String nome, String sobrenome, String cPF, String data_nasc, String nroConta, String dataAbertura) {
-        super(nome, sobrenome, cPF, data_nasc);
+    public Conta(String nroConta, Data dataAbertura) {
         this.nroConta = nroConta;
         this.dataAbertura = dataAbertura;
+        //this.correntistas = correntistas;
     }
 
 }

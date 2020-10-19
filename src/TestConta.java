@@ -1,33 +1,23 @@
+import accountmanagement.Cliente;
 import accountmanagement.Conta;
+import apoiosemana.Data;
 
 public class TestConta {
     public static void main(String[] args) throws Exception {
-        Conta eduardo = new Conta(
-        "Eduardo", 
-        "Piorini", 
-        "123.456.789-10", 
-        "02 out 1992", 
-        "0001-1", 
-        "08 out 2020" 
-        );//Conta eduardo
+        Data data1 = new Data(02, 10, 2020);
+        Cliente eduardo = new Cliente("Eduardo","Piorini", "37779593835", "02 out 1992");
+        Cliente[] correntistas = new Cliente[2];
+        correntistas[0] = eduardo;
+        Conta eduardoconta = new Conta("0001", data1);
 
-        Conta laura = new Conta(
-        "Laura", 
-        "Comucci", 
-        "012.345.678-91", 
-        "15 out 1991", 
-        "0001-2", 
-        "09 out 2020"
-        );//Conta laura
+        eduardoconta.depositar(2000.0);//saldo 2200,00
+        eduardoconta.saque(700.0);//saldo 1500,00
+        System.out.println(eduardoconta.getSaldo());
 
-        eduardo.depositar(2000.0);//saldo 2200,00
-        eduardo.saque(700.0);//saldo 1500,00
-        System.out.println(eduardo.getSaldo());
-
-        System.out.println(laura.getSaldo());
-        eduardo.transferePara(laura, 500.0);//saldo laura 700,00  saldo eduardo 1000,00
-        System.out.println(laura.getSaldo());
-        System.out.println(eduardo.getSaldo());
+       // System.out.println(laura.getSaldo());
+       // eduardoconta.transferePara(laura, 500.0);//saldo laura 700,00  saldo eduardo 1000,00
+       // System.out.println(laura.getSaldo());
+        System.out.println(eduardoconta.getSaldo());
 
     }
 }
