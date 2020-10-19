@@ -65,10 +65,13 @@ public class Conta{
         }
     }
 
-    public Conta(String nroConta, Data dataAbertura) {
+    public Conta(String nroConta, Double saldo, Data dataAbertura, Cliente[] correntistas) {
         this.nroConta = nroConta;
+        this.saldo = saldo;
         this.dataAbertura = dataAbertura;
-        //this.correntistas = correntistas;
+        this.correntistas = correntistas;
     }
+
+
 
 }

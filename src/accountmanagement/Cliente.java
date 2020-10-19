@@ -4,15 +4,10 @@ import adresses.Adress;
 import apoiosemana.Data;
 
 public class Cliente {
-    private String nome;
-    private String sobrenome;
-    private String CPF;
+    private String nome, sobrenome, CPF;
     private Data data_nasc;
     private Adress endereço;
 
-   
-
-    
     public Cliente(String nome, String sobrenome, String cPF, Data data_nasc) {
         this.nome = nome;
         this.sobrenome = sobrenome;
