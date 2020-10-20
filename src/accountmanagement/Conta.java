@@ -66,6 +66,16 @@ public class Conta{
     }
 
     public Conta(String nroConta, Double saldo, Data dataAbertura, Cliente[] correntistas) {
+        //throw exceptions
+        if (nroConta == null) {
+            throw new IllegalArgumentException("nroConta must have a valid value");
+            
+        }
+        if (correntistas == null) {
+            throw new IllegalArgumentException("Account must have at least one valid client");
+            
+        }
+        
         this.nroConta = nroConta;
         this.saldo = saldo;
         this.dataAbertura = dataAbertura;

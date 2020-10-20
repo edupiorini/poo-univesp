@@ -16,41 +16,52 @@ public class Data {
     private int day;
     private int month;
     private int year;
-    
 
+    public int getDay() {
+        return day;
+    }
 
- public  int getDay(){
-     return day;
- }
- public int getMonth(){
-     return month;
-    
- }
- public int getYear(){
-     return year;
- }
+    public int getMonth() {
+        return month;
 
- public void setDate(int day, int month, int year){
-     this.day = day;
-     this.month = month;
-     this.year = year;
- }
+    }
 
- public Data(int day, int month, int year) {
-     this.day = day;
-     this.month = month;
-     this.year = year;
- }
+    public int getYear() {
+        return year;
+    }
 
- @Override
- public String toString() {
-     return "Date: "+day+" / " +month+" / "+year;
- }
- public void trocarCom(int new_day){
-     int temp = getDay();
-     this.day = new_day;
-     new_day = temp;
- }
- }
-    
+    public void setDate(int day, int month, int year) {
+        // throw exceptions
+        if (day <= 0 || day > 31) {
+            throw new IllegalArgumentException("Day cannot be negative or greater than 31");
+        }
+        if (month <= 0 || month > 12) {
+            throw new IllegalArgumentException("Month cannot be negative or greater than 12");
+        }
+        if (year <= 1900) {
+            throw new IllegalArgumentException("Year cannot be negative or this person is dead!");
 
+        } // end of throw exceptions
+
+        this.day = day;
+        this.month = month;
+        this.year = year;
+    }
+
+    public Data(int day, int month, int year) {
+        this.day = day;
+        this.month = month;
+        this.year = year;
+    }
+
+    @Override
+    public String toString() {
+        return "Date: " + day + " / " + month + " / " + year;
+    }
+
+    public void trocarCom(int new_day) {
+        int temp = getDay();
+        this.day = new_day;
+        new_day = temp;
+    }
+}
