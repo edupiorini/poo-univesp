@@ -6,7 +6,7 @@ import Models.Data.Data;
 public class Conta{
 
     private String nroConta;
-    private Double saldo = 200.0;
+    private double saldo = 200.0;
     private Data dataAbertura;
     //private Cliente[] correntistas;
 
@@ -81,14 +81,11 @@ public class Conta{
         this.nroConta = nroConta;
         this.saldo = saldo;
         this.dataAbertura = dataAbertura;
-        this.correntistas = correntistas;
+        
     }
 
-    public Conta(String nroConta, Double saldo, Data dataAbertura) {
-        this.nroConta = nroConta;
-        this.saldo = saldo;
-        this.dataAbertura = dataAbertura;
-    }
+	public Conta() {
+	}
 
 
 
