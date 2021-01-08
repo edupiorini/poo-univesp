@@ -1,17 +1,19 @@
-package accountmanagement;
+package Models.Account;
 
-import apoiosemana.Data;
+import Models.Client.Cliente;
+import Models.Data.Data;
 
 public class Conta{
 
     private String nroConta;
     private Double saldo = 200.0;
     private Data dataAbertura;
-    private Cliente[] correntistas;
+    //private Cliente[] correntistas;
 
     public void setNroConta(String nroConta) {
         this.nroConta = nroConta;
     }
+
 
     public String getNroConta() {
         return nroConta;
@@ -80,6 +82,12 @@ public class Conta{
         this.saldo = saldo;
         this.dataAbertura = dataAbertura;
         this.correntistas = correntistas;
+    }
+
+    public Conta(String nroConta, Double saldo, Data dataAbertura) {
+        this.nroConta = nroConta;
+        this.saldo = saldo;
+        this.dataAbertura = dataAbertura;
     }
 
 

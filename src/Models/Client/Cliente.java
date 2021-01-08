@@ -1,7 +1,7 @@
-package accountmanagement;
+package Models.Client;
 
-import adresses.Adress;
-import apoiosemana.Data;
+import Models.Adress.Adress;
+import Models.Data.Data;
 
 public class Cliente {
     private String nome, sobrenome, CPF;

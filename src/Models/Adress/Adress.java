@@ -1,4 +1,4 @@
-package adresses;
+package Models.Adress;
 
 public class Adress {
     private String rua, cidade, estado, país, cep;
