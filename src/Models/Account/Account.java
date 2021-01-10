@@ -1,6 +1,6 @@
 package Models.Account;
 
-import Models.Client.Cliente;
+import Models.Client.Client;
 import Models.Data.Data;
 
 public class Account{
@@ -70,7 +70,7 @@ public class Account{
         }
     }
 
-    public Account(String accountNumber, Double balance, Data startingDate, Cliente[] correntistas) {
+    public Account(String accountNumber, Double balance, Data startingDate, Client[] correntistas) {
         //throw exceptions
         if  (accountNumber == null) {
             throw new IllegalArgumentException( "accountNumber must have a valid value");
