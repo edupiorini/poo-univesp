@@ -1,14 +1,13 @@
-import Models.Account.Conta;
-import Models.Data.Data;
+import Models.Account.Account;
 
 public class App {
     public static void main(String[] args) {
-        Conta c1 = new Conta();
-        c1.depositar(300.00);
+        Account c1 = new Account();
+        c1.deposit(300.00);
 
-        Conta c2 = c1;
-        System.out.println(c1.getSaldo());
-        System.out.println(c2.getSaldo());
+        Account c2 = c1;
+        System.out.println(c1.getBalance());
+        System.out.println(c2.getBalance());
 
 
         
