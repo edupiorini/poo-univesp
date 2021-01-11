@@ -1,14 +1,14 @@
 package Models.Client;
 
 import Models.Adress.Adress;
-import Models.Data.Data;
+import Models.Date.Date;
 
 public class Client {
     private String name, surname, regNumber;
-    private Data birthDate;
+    private Date birthDate;
     private Adress adress;
 
-    public Client(String name, String surname, String cPF, Data birthDate) {
+    public Client(String name, String surname, String cPF, Date birthDate) {
         this.name = name;
         this.surname = surname;
         regNumber = cPF;
@@ -39,11 +39,11 @@ public class Client {
       this.regNumber = regNumber;
     }
 
-    public Data getBirthDate() {
+    public Date getBirthDate() {
       return birthDate;
     }
 
-    public void setBirthDate(Data birthDate) {
+    public void setBirthDate(Date birthDate) {
       this.birthDate = birthDate;
     }
 

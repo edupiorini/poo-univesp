@@ -1,4 +1,4 @@
-package Models.Data;
+package Models.Date;
 
 /*
 Crie uma classe chamada Data que inclua os atributos dia, mês e ano. Além disso, forneça:
@@ -12,7 +12,7 @@ Crie uma classe chamada Data que inclua os atributos dia, mês e ano. Além diss
         receber apenas UMA data como parâmetro, não duas.
 */
 
-public class Data {
+public class Date {
     private int day;
     private int month;
     private int year;
@@ -48,7 +48,7 @@ public class Data {
         this.year = year;
     }
 
-    public Data(int day, int month, int year) {
+    public Date(int day, int month, int year) {
         this.day = day;
         this.month = month;
         this.year = year;

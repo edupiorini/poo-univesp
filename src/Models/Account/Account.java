@@ -1,13 +1,13 @@
 package Models.Account;
 
 import Models.Client.Client;
-import Models.Data.Data;
+import Models.Date.Date;
 
 public class Account{
 
     private String accountNumber;
     private double balance = 200.0;
-    private Data startingDate;
+    private Date startingDate;
     //private Cliente[] correntistas;
 
     public void setAccountNumber(String accountNumber) {
@@ -23,7 +23,7 @@ public class Account{
         startingDate.setDate(day, month, year);
     }
 
-    public Data getStartingDate() {
+    public Date getStartingDate() {
         return startingDate;
     }
 
@@ -70,7 +70,7 @@ public class Account{
         }
     }
 
-    public Account(String accountNumber, Double balance, Data startingDate, Client[] correntistas) {
+    public Account(String accountNumber, Double balance, Date startingDate, Client[] correntistas) {
         //throw exceptions
         if  (accountNumber == null) {
             throw new IllegalArgumentException( "accountNumber must have a valid value");
